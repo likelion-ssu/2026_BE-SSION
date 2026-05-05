@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>1주차 과제 자기소개</title>
+</head>
+<body>
+
+<h1>자기소개</h1>
+
+<hr>
+
+<!-- Github에 공개하고 싶지 않은 내용은 지워주세요 -->
+<!-- TODO: 추가하고 싶은 내용이 있다면 작성해주세요 -->
+<h2>기본 정보</h2>
+<p>이름: <span th:text="${name}">default</span></p>
+<p>전공: <span th:text="${major}">default</span></p>
+<p>이메일: <span th:text="${email}">default</span></p>
+<p>관심 분야: <span th:text="${interest}">default</span></p>
+
+<hr>
+
+<h2>소개</h2>
+<p>
+   거북이처럼 천천히.. 도전하는 이어진입니다!
+</p>
+
+<hr>
+
+<h2>기술 스택</h2>
+<ul>
+    <li th:each="skill : ${skills}" th:text="${skill}">default</li>
+</ul>
+
+<hr>
+
+<h2>목표</h2>
+<p>
+    과정은 느리더라도 결과는 꼭 이뤄내기!
+</p>
+
+</body>
+</html>
